@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  if messages
+    ul
+      each message in messages
+        li= message.added.toLocaleTimeString()
+          p= message.user + ': ' + message.text
+        br
+//TODO : test
